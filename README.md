@@ -1,10 +1,25 @@
 <div align="center">
     <img src="./images/CL Banner.png"/>
 </div>
-
 <br />
 
-This is a repository for generating short audio samples and training waveform diffusion models on a GPU with less than 2GB VRAM.
+<a href="https://huggingface.co/spaces/crlandsc/tiny-audio-diffusion">
+  <img src="https://img.shields.io/badge/%F0%9F%A4%97_Spaces_Demo-blue" alt="Hugging Face Spaces Badge">
+</a>
+<a href="https://youtu.be/m6Eh2srtTro">
+  <img src="https://img.shields.io/badge/Repo_Tutorial-red?logo=YouTube" alt="YouTube Tutorial Badge">
+</a>
+<a href="https://medium.com/towards-data-science/tiny-audio-diffusion-ddc19e90af9b">
+  <img src="https://img.shields.io/badge/Towards_Data_Science-red?logo=Medium&color=black" alt="Towards Data Science Badge">
+</a>
+<a href="https://github.com/crlandsc/tiny-audio-diffusion/stargazers">
+    <img src="https://img.shields.io/github/stars/crlandsc/tiny-audio-diffusion?color=gold" alt="GitHub Repo stars">
+</a>
+<a href="https://github.com/crlandsc/tiny-audio-diffusion/forks">
+    <img src="https://img.shields.io/github/forks/crlandsc/tiny-audio-diffusion?color=green" alt="GitHub forks">
+</a>
+
+This is a repository for generating short audio samples and training waveform diffusion models on a consumer-grade GPU with less than 2GB VRAM.
 
 ## Motivation
 
@@ -93,8 +108,11 @@ Pre-trained models can be downloaded to generate samples via the [inference note
 ---
 
 ## Inference
-#### Audio Sample Generation
+### Hugging Face Spaces
+Generate samples withot code on [🤗 Hugging Face Spaces](https://huggingface.co/spaces/crlandsc/tiny-audio-diffusion)
 
+### Jupyter Notebook
+#### Audio Sample Generation
 Current Capabilities:
 - Unconditional Generation
 - Conditional "Style-transfer" Generation

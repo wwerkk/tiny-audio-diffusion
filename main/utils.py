@@ -12,6 +12,12 @@ from omegaconf import DictConfig, OmegaConf
 from pytorch_lightning import Callback
 from pytorch_lightning.utilities import rank_zero_only
 
+try:
+    from pytorch_lightning.loggers import Logger
+except ImportError:
+    from pytorch_lightning.loggers import LightningLoggerBase
+    Logger = LightningLoggerBase
+
 """ Training Utils"""
 
 def get_logger(name=__name__) -> logging.Logger:
@@ -113,7 +119,7 @@ def log_hyperparameters(
     datamodule: pl.LightningDataModule,
     trainer: pl.Trainer,
     callbacks: List[pl.Callback],
-    logger: List[pl.loggers.LightningLoggerBase],
+    logger: List[Logger],
 ) -> None:
     """Controls which config parts are saved by Lightning loggers.
     Additionaly saves:
@@ -157,7 +163,7 @@ def finish(
     datamodule: pl.LightningDataModule,
     trainer: pl.Trainer,
     callbacks: List[pl.Callback],
-    logger: List[pl.loggers.LightningLoggerBase],
+    logger: List[Logger],
 ) -> None:
     """Makes sure everything closed properly."""
 
